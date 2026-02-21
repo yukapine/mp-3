@@ -12,10 +12,7 @@ export default function App() {
   const [data, setData] = useState<Character[]>([]);
   useEffect(() => {
     async function fetchData(): Promise<void> {
-      const API_BASE = import.meta.env.DEV
-        ? '/api'
-        : 'https://psychonauts-api.vercel.app/api';
-      const rawData = await fetch(`${API_BASE}/characters`);
+      const rawData = await fetch(`api/characters`);
       const results: Character[] = await rawData.json();
       setData(results.filter((c) => c.img && c.psiPowers && c.psiPowers.length > 0));
     }

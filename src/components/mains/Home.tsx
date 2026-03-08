@@ -32,17 +32,17 @@ const IntroSection = styled.section`
   padding: 1rem 0;
 `;
 
-const Heading2 = styled.h2`
-  color: #484848;
-  font-size: calc(1.5rem + 0.5vw);
-  margin-bottom: 1rem;
-  border-bottom: 3px solid #e0e0e0;
-  padding-bottom: 0.5rem;
+// const Heading2 = styled.h2`
+//   color: #484848;
+//   font-size: calc(1.5rem + 0.5vw);
+//   margin-bottom: 1rem;
+//   border-bottom: 3px solid #e0e0e0;
+//   padding-bottom: 0.5rem;
 
-  @media screen and (max-width: 480px) {
-    font-size: 1.3rem;
-  }
-`;
+//   @media screen and (max-width: 480px) {
+//     font-size: 1.3rem;
+//   }
+// `;
 
 const Heading3 = styled.h3`
   color: #5e5e5e;
@@ -91,15 +91,15 @@ export default function Home() {
     return (
         <StyledMain>
             <IntroSection>
-                <p>Jackson Pine is an illustrator, concept artist, and character designer from Berkeley, California. He is
+                <Paragraph>Jackson Pine is an illustrator, concept artist, and character designer from Berkeley, California. He is
                     currently studying Computer Science at Boston University.
 
                     He is well versed in Photoshop and Illustrator as well as Blender, Procreate, Indesign, and Substance
-                    Painter.</p>
+                    Painter.</Paragraph>
 
                 <Highlights>
                     <HighlightCard>
-                        <h3>Skills</h3>
+                        <Heading3>Skills</Heading3>
                         <ul>
                             <li>Adobe Suite (Photoshop, Illustrator, Indesign, Substance Painter)</li>
                             <li>Procreate (Illustration, Design)</li>

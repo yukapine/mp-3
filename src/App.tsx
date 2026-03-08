@@ -1,29 +1,73 @@
-import CharacterList from "./components/CharacterList.tsx";
+import Header from "./components/Header.tsx";
+import Nav from "./components/Nav.tsx";
+import Footer from "./components/Footer.tsx";
+import { createBrowserRouter, Route, RouterProvider, Routes } from "react-router";
+import Education from "./components/mains/Education.tsx";
+import Home from "./components/mains/Home.tsx";
+import Portfolio from "./components/mains/Portfolio.tsx";
+import Certifications from "./components/mains/Certifications.tsx";
+import About from "./components/mains/About.tsx";
+import Projects from "./components/mains/Projects.tsx";
 import styled from "styled-components";
-import { useEffect, useState } from "react";
-import type { Character } from "./interfaces/Characters.ts";
 
-const ParentDiv = styled.div`
-    width: 90vw;
-    margin: auto;
+
+const StyledWrapper = styled.div`
+   
 `;
 
+const StyledContainer = styled.div`
+    
+`;
+
+function Root() {
+  return (
+    <StyledWrapper>
+      <Header />
+      <StyledContainer>
+        <Nav />
+        <Routes>
+          <Route
+            path={`/`}
+            element={<Home />}
+          />
+          <Route
+            path={`/education/education.html`}
+            element={<Education />}
+          />
+          <Route
+            path={`/employment/about.html`}
+            element={<About />}
+          />
+          <Route
+            path={`/achievements/certifications.html`}
+            element={<Certifications />}
+          />
+          <Route
+            path={`/references/portfolio.html`}
+            element={<Portfolio />}
+          />
+          <Route
+            path={`/documents/projects.html`}
+            element={<Projects />}
+          />
+
+        </Routes>
+      </StyledContainer>
+      <Footer />
+    </StyledWrapper>
+  );
+}
+
+const router = createBrowserRouter(
+  [{ path: "*", Component: Root }]
+)
+
+
 export default function App() {
-  const [data, setData] = useState<Character[]>([]);
-  useEffect(() => {
-    async function fetchData(): Promise<void> {
-      const rawData = await fetch(`api/characters`);
-      const results: Character[] = await rawData.json();
-      setData(results.filter((c) => c.img && c.psiPowers && c.psiPowers.length > 0));
-    }
-    fetchData()
-      .then(() => console.log("Data fetched successfully"))
-      .catch((e: Error) => console.log("There was the error: " + e));
-  }, [data.length]);
 
   return (
-    <ParentDiv>
-      <CharacterList data={data} />
-    </ParentDiv>
-  );
+    <>
+      <RouterProvider router={router} />
+    </>
+  )
 }

@@ -3,84 +3,25 @@
 
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Psychonauts - API Assignment</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=VT323&family=Share+Tech+Mono&family=Press+Start+2P&display=swap"
-    rel="stylesheet" />
   <style>
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
+    * {
       margin: 0;
-      padding: 0;
-    }
-
-    :root {
-      /* hex-codes for menu coloring */
-      --mac-white: #f0f0f0;
-      --mac-light: #d4d0c8;
-      --mac-mid: #b0aca0;
-      --mac-dark: #555250;
-      --mac-black: #1a1a1a;
-      --mac-desktop: #9a9d9e;
-      --pop-red: #e8341c;
-      --pop-orange: #f97316;
-      --pop-yellow: #f5c518;
-      --pop-green: #3aa74e;
-      --pop-teal: #2b8a8a;
-      --pop-blue: #2563a8;
-      --border-outer: 2px solid var(--mac-black);
-      --border-inner: 1px solid var(--mac-white);
-      --shadow-window: 4px 4px 0 var(--mac-black);
-
-      --font-display: 'Press Start 2P', monospace;
-      --font-ui: 'Share Tech Mono', monospace;
-      --font-pixel: 'VT323', monospace;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      background-color: var(--mac-desktop);
-      /* Classic mac dot background - from old project */
-      background-image:
-        radial-gradient(circle, rgba(0, 0, 0, 0.18) 1px, transparent 1px);
-      background-size: 4px 4px;
-      font-family: var(--font-ui);
-      min-height: 100vh;
-      color: var(--mac-black);
-    }
-
-    #root {
-      min-height: 100vh;
-    }
-
-    /* retroscrollbar - from old project*/
-    ::-webkit-scrollbar {
-      width: 16px;
-    }
-
-    ::-webkit-scrollbar-track {
-      background: var(--mac-light);
-      border-left: 2px solid var(--mac-black);
-    }
-
-    ::-webkit-scrollbar-thumb {
-      background: var(--mac-light);
-      border: 2px solid var(--mac-black);
-      box-shadow: inset 1px 1px 0 var(--mac-white), inset -1px -1px 0 var(--mac-dark);
+      box-sizing: border-box;
     }
   </style>
+  <title>Home - Professional Resume</title>
+  <link rel="stylesheet" type="text/css" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./src/./index.css">
 </head>
 
 <body>
   <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
+  <script type="module" src="./src/main.tsx"></script>
 </body>
 
 </html>

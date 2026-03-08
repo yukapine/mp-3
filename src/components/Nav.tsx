@@ -67,11 +67,11 @@ export default function Nav() {
         <StyledNav>
             <NavList>
                 <NavItem><StyledLink to="/">Home</StyledLink></NavItem>
-                <NavItem><StyledLink to="../home/about">About</StyledLink></NavItem>
-                <NavItem><StyledLink to="../home/education">Education</StyledLink></NavItem>
-                <NavItem><StyledLink to="../home/portfolio">Portfolio</StyledLink></NavItem>
-                <NavItem><StyledLink to="../home/certifications">Certifications</StyledLink></NavItem>
-                <NavItem><StyledLink to="../home/projects">Projects</StyledLink></NavItem>
+                <NavItem><StyledLink to="/about">About</StyledLink></NavItem>
+                <NavItem><StyledLink to="/education">Education</StyledLink></NavItem>
+                <NavItem><StyledLink to="/portfolio">Portfolio</StyledLink></NavItem>
+                <NavItem><StyledLink to="/certifications">Certifications</StyledLink></NavItem>
+                <NavItem><StyledLink to="/projects">Projects</StyledLink></NavItem>
             </NavList>
         </StyledNav>
     );

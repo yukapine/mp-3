@@ -31,23 +31,23 @@ function Root() {
             element={<Home />}
           />
           <Route
-            path={`/education/education.html`}
+            path={`/education`}
             element={<Education />}
           />
           <Route
-            path={`/employment/about.html`}
+            path={`/about`}
             element={<About />}
           />
           <Route
-            path={`/achievements/certifications.html`}
+            path={`/certifications`}
             element={<Certifications />}
           />
           <Route
-            path={`/references/portfolio.html`}
+            path={`/portfolio`}
             element={<Portfolio />}
           />
           <Route
-            path={`/documents/projects.html`}
+            path={`/projects`}
             element={<Projects />}
           />
 

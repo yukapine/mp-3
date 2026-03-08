@@ -7,6 +7,7 @@ const CalculatorSection = styled.div`
   border-radius: 10px;
   margin-top: 3rem;
   color: white;
+  
 
   h2 {
     color: white;
@@ -23,6 +24,7 @@ const CalculatorContainer = styled.div`
   padding: 2rem;
   border-radius: 10px;
   margin-top: 1.5rem;
+  
 
   @media screen and (max-width: 480px) {
     padding: 1rem;
@@ -108,6 +110,42 @@ const Button = styled.button<{ $clear?: boolean }>`
   `}
 `;
 
+const Paragraph = styled.p`
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: calc(0.9rem + 0.2vw);
+`;
+
+
+const StyledMain = styled.main`
+  background: white;
+  padding: calc(1.5rem + 1vw);
+  margin: calc(1rem + 0.5vw);
+  margin-left: calc(30% + 1rem);
+  margin-right: calc(1rem + 0.5vw);
+  width: calc(70% - 2rem);
+  border-radius: 10px;
+  min-height: 100vh;
+
+  @media screen and (max-width: 1000px) {
+    width: calc(100% - 2rem);
+    margin-left: calc(1rem + 0.5vw);
+  }
+
+  @media screen and (max-width: 750px) {
+    width: calc(100% - 2rem);
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding: 1.5rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+`;
+
 function Calculator() {
     const [input1, setInput1] = useState("");
     const [input2, setInput2] = useState("");
@@ -164,44 +202,46 @@ function Calculator() {
     }
 
     return (
-        <CalculatorSection>
-            <h2>JavaScript Calculator</h2>
-            <p className="description">Behold! Vanilla Javascript Calculator</p>
+        <StyledMain>
+            <CalculatorSection>
+                <h2>JavaScript Calculator</h2>
+                <Paragraph className="description">Behold! Vanilla Javascript Calculator</Paragraph>
 
-            <CalculatorContainer>
-                <Display>
-                    <Output>
-                        {output}
-                    </Output>
-                </Display>
+                <CalculatorContainer>
+                    <Display>
+                        <Output $negative={Number(output) < 0}>
+                            {output}
+                        </Output>
+                    </Display>
 
-                <Inputs>
-                    <Input
-                        type="text"
-                        id="first-number"
-                        value={input1}
-                        placeholder="First number"
-                        onChange={(e) => setInput1(e.target.value)}
-                    />
-                    <Input
-                        type="text"
-                        id="second-number"
-                        value={input2}
-                        placeholder="Second number"
-                        onChange={(e) => setInput2(e.target.value)}
-                    />
-                </Inputs>
+                    <Inputs>
+                        <Input
+                            type="text"
+                            id="first-number"
+                            value={input1}
+                            placeholder="First number"
+                            onChange={(e) => setInput1(e.target.value)}
+                        />
+                        <Input
+                            type="text"
+                            id="second-number"
+                            value={input2}
+                            placeholder="Second number"
+                            onChange={(e) => setInput2(e.target.value)}
+                        />
+                    </Inputs>
 
-                <Buttons>
-                    <Button onClick={doAdd}>+</Button>
-                    <Button onClick={doSubtract}>-</Button>
-                    <Button onClick={doMultiply}>*</Button>
-                    <Button onClick={doDivide}>/</Button>
-                    <Button onClick={doPower}>**</Button>
-                    <Button onClick={doClear} className="clear-btn">Clear</Button>
-                </Buttons>
-            </CalculatorContainer>
-        </CalculatorSection>
+                    <Buttons>
+                        <Button onClick={doAdd}>+</Button>
+                        <Button onClick={doSubtract}>-</Button>
+                        <Button onClick={doMultiply}>*</Button>
+                        <Button onClick={doDivide}>/</Button>
+                        <Button onClick={doPower}>**</Button>
+                        <Button onClick={doClear} className="clear-btn">Clear</Button>
+                    </Buttons>
+                </CalculatorContainer>
+            </CalculatorSection>
+        </StyledMain>
     );
 }
 

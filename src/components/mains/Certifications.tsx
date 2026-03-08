@@ -28,22 +28,29 @@ const StyledMain = styled.main`
   }
 `;
 
+const Paragraph = styled.p`
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: calc(0.9rem + 0.2vw);
+`;
+
 export default function Certifications() {
     return (
         <StyledMain>
             <section className="certifications-content">
                 <div className="cert-item">
                     <h2>PCEP (Certified Entry-Level Python Programmer)</h2>
-                    <p className="issuer">PCEP</p>
-                    <p className="date">Issued: March 2020</p>
-                    <p className="description">Demonstrates comprehensive understanding of Python Programming.</p>
+                    <Paragraph className="issuer">PCEP</Paragraph>
+                    <Paragraph className="date">Issued: March 2020</Paragraph>
+                    <Paragraph className="description">Demonstrates comprehensive understanding of Python Programming.</Paragraph>
                 </div>
 
                 <div className="cert-item">
                     <h2>Java SE 17/21 Developer</h2>
-                    <p className="issuer">Oracle</p>
-                    <p className="date">Issued: June 2021</p>
-                    <p className="description">Demonstrates comprehensive understanding of Java Programming.</p>
+                    <Paragraph className="issuer">Oracle</Paragraph>
+                    <Paragraph className="date">Issued: June 2021</Paragraph>
+                    <Paragraph className="description">Demonstrates comprehensive understanding of Java Programming.</Paragraph>
                 </div>
 
             </section>

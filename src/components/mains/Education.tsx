@@ -28,6 +28,13 @@ const StyledMain = styled.main`
   }
 `;
 
+const Paragraph = styled.p`
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: calc(0.9rem + 0.2vw);
+`;
+
 export default function Education() {
     return (
         <StyledMain>
@@ -35,8 +42,8 @@ export default function Education() {
                 <div className="education-item">
                     <h2>Boston University</h2>
                     <h3>Bachelors Degree in Computer Science</h3>
-                    <p className="date">September 2022 - May 2026</p>
-                    <p className="gpa">GPA: 3.5/4.0</p>
+                    <Paragraph className="date">September 2022 - May 2026</Paragraph>
+                    <Paragraph className="gpa">GPA: 3.5/4.0</Paragraph>
 
                     <h4>Relevant Coursework:</h4>
                     <ul>

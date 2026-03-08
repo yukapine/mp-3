@@ -28,28 +28,35 @@ const StyledMain = styled.main`
   }
 `;
 
+const Paragraph = styled.p`
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: calc(0.9rem + 0.2vw);
+`;
+
 export default function About() {
     return (
         <StyledMain>
             <section className="about-content">
                 <h2>Jackson Pine</h2>
-                <p>I'm a developer and designer who thrives on turning complex problems into elegant solutions. My journey
+                <Paragraph>I'm a developer and designer who thrives on turning complex problems into elegant solutions. My journey
                     in
                     technology began during my undergraduate studies, where I discovered my passion for building
-                    applications that make a real difference in people's lives.</p>
+                    applications that make a real difference in people's lives.</Paragraph>
 
                 <h2>My Approach</h2>
-                <p>I believe in writing clean, maintainable code and following best practices. Collaboration is at the heart
+                <Paragraph>I believe in writing clean, maintainable code and following best practices. Collaboration is at the heart
                     of everything I do, whether I'm working with designers, product managers, or fellow developers. I'm
-                    constantly learning and staying up-to-date with the latest technologies and industry trends.</p>
+                    constantly learning and staying up-to-date with the latest technologies and industry trends.</Paragraph>
 
 
                 <h2>Beyond Code</h2>
-                <p>When I'm not coding, you can find me working on creative projects or practicing my hobbies.</p>
+                <Paragraph>When I'm not coding, you can find me working on creative projects or practicing my hobbies.</Paragraph>
 
                 <h2>Let's Work Together</h2>
-                <p>I'm always open to meeting other creators and developers and hearing their ideas.
-                    Whether you want to work together or just say hi, feel free to reach out.</p>
+                <Paragraph>I'm always open to meeting other creators and developers and hearing their ideas.
+                    Whether you want to work together or just say hi, feel free to reach out.</Paragraph>
             </section>
         </StyledMain>
     );
